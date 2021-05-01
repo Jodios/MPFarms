@@ -1,0 +1,36 @@
+p{
+    padding: 10px;
+}
+
+.paragraph{
+    margin-left: 1%; 
+    margin-right: 1%;
+    padding: 1%; 
+    border-radius: 5px;
+    background-color: rgba(245, 222, 179, .5);
+    margin-bottom: 1%;
+    display: grid; 
+    grid-template-columns: 50% 50%;
+}
+
+
+
+.paragraphPicture{
+    width: 40%;
+}
+
+.imageWrapper{
+    display: block; 
+    text-align: center;
+}
+
+/* .paragraph:nth-child(odd) .paragraphPicture{
+    float: right;
+    background-color: blue;
+} */
+
+/* .paragraphPicture:nth-of-type(odd){
+    clear: both; 
+    float: right;
+    border: solid blue;
+} */
