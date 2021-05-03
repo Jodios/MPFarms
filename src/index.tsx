@@ -7,7 +7,7 @@ import Navbar from "./components/NavbarV2/Navbar";
 import Blogs from "./pages/Blogs/blogs"
 import About from "./pages/About/about"
 import Store from "./pages/Store/store"
-import Home from "./pages/Home"
+import Home from "./pages/Home/home"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import "./index.css";
 

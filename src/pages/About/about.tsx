@@ -7,7 +7,7 @@ const About = () => {
             justifyContent: 'right', 
             alignItems: 'right',
             height: '100vh'
-        }}>
+        }} className="pageBody">
             <h1>About us.</h1>
         </div>
     )

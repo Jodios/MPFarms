@@ -8,7 +8,7 @@ export default class Store extends React.Component{
                 justifyContent: 'right', 
                 alignItems: 'right',
                 height: '100vh'
-            }}>
+            }} className="pageBody">
                 <h1>Store...</h1>
             </div>
         )

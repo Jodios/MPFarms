@@ -9,7 +9,7 @@ const Blogs = () => {
             justifyContent: 'right',
             alignItems: 'right',
             height: '100vh'
-        }}>
+        }} className="pageBody">
             <h1>Blogs coming soon</h1>
         </div>
 
