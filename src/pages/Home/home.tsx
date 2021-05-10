@@ -22,26 +22,19 @@ class Home extends React.Component{
                         </div>
                         <div className="right"></div>
                     </div> 
-                    <img src={mpFarmsLogo} className="logo headerLogoWrapper"/>
-                    {/* <div className="headerTextWrapper">
-                        <div className="left"></div>
-                        <div className="center">
-                        </div>
-                        <div className="right"></div>
-                    </div> */}
+                    
+                    <img src={mpFarmsLogo} alt="log" className="logo headerLogoWrapper"/>
                     
                     <div className="pageBody">
-
-                        {/* we want this div to be absolutely positioned */}
+                        
                         <div>
                             <h1>Hi, <b>{name}</b></h1><br/>
-                            <b>MP Farms</b> is currently under construction. Features to expect are <b/>
+                            <b>MP Farms</b> is currently under construction. Features to expect are <br/>
                             <ul>
                                 <li>Shopping for honey and fresh produce.</li>
                                 <li>Blogs</li>
                             </ul>
                         </div>
-
                        
                         {paragraphs.map((p, index) => {
                             let paragraph = <p>{p.text}</p>;

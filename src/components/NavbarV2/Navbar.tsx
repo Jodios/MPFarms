@@ -8,6 +8,7 @@ import firebase from "firebase";
 import "./Navbar.css"
 import fbLoginIcon from "../../resources/icons/fbLogin3.png";
 import googleLoginIcon from "../../resources/icons/googleLogin.png";
+import mpFarmsLogo from "../../resources/icons/mp-farms.png";
 
 export default class MyNavbar extends React.Component {
 
@@ -56,10 +57,9 @@ export default class MyNavbar extends React.Component {
                         <>
                             <Navbar variant="dark" className="myNav" sticky="top">
                                 {/* <Link to="/"><Navbar.Brand>MPFarms</Navbar.Brand></Link> */}
-                                <Navbar.Brand>
+                                <Navbar.Brand style={{"textAlign": "left"}}>
                                     <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"} onClick={this.toggleBars}></i>
-                                    {' '}
-                                    <Link to="/" className="homeLink">MPFarms</Link>
+                                    <Link to="/" className="homeLink"><img src={mpFarmsLogo} className="navBrand" alt="home logo"/></Link>
                                 </Navbar.Brand>
                                 <Nav className="mr-auto"/>
                                 {googleLoginButton}
