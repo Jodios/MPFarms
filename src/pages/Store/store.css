@@ -1,0 +1,16 @@
+.item{
+    width: 40%; 
+    padding: 1%; 
+    border-radius: 5px;
+    background-color: rgba(245, 222, 179, .5);
+    margin-bottom: 1%;
+}
+
+@media all 
+and (max-device-width: 700px){
+
+    .item{
+        width: 100%;
+    }
+
+}
