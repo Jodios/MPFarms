@@ -4,6 +4,37 @@
     border-radius: 5px;
     background-color: rgba(245, 222, 179, .5);
     margin-bottom: 1%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.quantity{
+    margin-left: 1%; 
+    margin-bottom: 1%; 
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.sizes{
+    margin-left: 1%; 
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.size{
+    margin-right: 3%; 
+    border-radius: 9%; 
+    background-color: rgb(248, 149, 0);
+    cursor: pointer;
+}
+
+.addCart{
+    margin-left: 1%; 
+    width: 100%;
+}
+
+.itemPicture{
+    max-width: 100%;
 }
 
 @media all 

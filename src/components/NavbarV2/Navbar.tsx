@@ -9,7 +9,7 @@ import "./Navbar.css"
 import fbLoginIcon from "../../resources/icons/fbLogin3.png";
 import googleLoginIcon from "../../resources/icons/googleLogin.png";
 import mpFarmsLogo from "../../resources/icons/mp-farms.png";
-
+import "../../util/firebase";
 export default class MyNavbar extends React.Component {
 
     state = {clicked: false, provider: null};

@@ -1,7 +1,11 @@
 export default interface item{
+    id: string, 
     name: string,
-    price: number,
-    quantity: number,
-    sizes: number[],
-    units: string
+    variations: {
+        price: number,
+        quantity: number,
+        size: number
+    }[], 
+    units: string,
+    image: string
 }
