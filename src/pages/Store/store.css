@@ -28,6 +28,10 @@
     cursor: pointer;
 }
 
+.selected{
+    background-color: rgb(207, 130, 14);
+}
+
 .addCart{
     margin-left: 1%; 
     width: 100%;
