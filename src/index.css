@@ -2,8 +2,9 @@ body{
     background-color: #f1f5fb;
     text-align: center;
     background-image: url("./resources/images/HoneyComb-Background.png");
-    background-repeat: repeat-y;
-    
+    background-repeat: repeat;
+    height: 100%; 
+    width: 100%; 
     background-size: auto;
     background-position: center;
 }

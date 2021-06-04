@@ -6,6 +6,7 @@ import { FirebaseAuthConsumer } from "@react-firebase/auth";
 import { NavLink as Link } from "react-router-dom";
 import firebase from "firebase";
 import "./Navbar.css"
+import cartIcon from "../../resources/icons/cart.png";
 import fbLoginIcon from "../../resources/icons/fbLogin3.png";
 import googleLoginIcon from "../../resources/icons/googleLogin.png";
 import mpFarmsLogo from "../../resources/icons/mp-farms.png";
@@ -31,11 +32,15 @@ export default class MyNavbar extends React.Component {
         return (
             <FirebaseAuthConsumer>
                 {({ user, firebase, providerId, isSignedIn }) => {
-                    let profilePicture;
-                    let authButton;
-                    let googleLoginButton;
-                    let facebookLoginButton;
+                    let profilePicture, authButton, googleLoginButton, facebookLoginButton,
+                    cart;
+                    
                     if (isSignedIn) {
+                        cart = 
+                            <div className="cart">
+                                <img src={cartIcon} className="cartIcon" alt="shopping cart"/>
+                                <div className="cartAmount"><p>100</p></div>
+                            </div> 
                         googleLoginButton = null;
                         facebookLoginButton = null;
                         profilePicture = 
@@ -45,6 +50,12 @@ export default class MyNavbar extends React.Component {
                         authButton =
                             <div onClick={() => {this.logout(); this.toggleBars();}} className="nav-link">Sign Out</div>;
                     } else {
+                        cart=null; 
+                        cart = 
+                            <div className="cart">
+                                <img src={cartIcon} className="cartIcon" alt="shopping cart"/>
+                                <div className="cartAmount"><p>100</p></div>
+                            </div> 
                         profilePicture = null;
                         authButton =
                             <div onClick={() => {this.login(new firebase.auth.FacebookAuthProvider()); this.toggleBars();}} className="nav-link">Sign In</div>;
@@ -62,6 +73,7 @@ export default class MyNavbar extends React.Component {
                                     <Link to="/" className="homeLink"><img src={mpFarmsLogo} className="navBrand" alt="home logo"/></Link>
                                 </Navbar.Brand>
                                 <Nav className="mr-auto"/>
+                                {cart} 
                                 {googleLoginButton}
                                 {facebookLoginButton}
                                 {profilePicture}

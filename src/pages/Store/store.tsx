@@ -93,38 +93,40 @@ export default class Store extends React.Component{
         return (
             <div className="pageBody">
                 <h1>Store...</h1>
-                {this.state.items.map((inventoryItem: item) => {
-                    let quantity = this.state[inventoryItem.id+"cartQuantity"]; 
-                    let i = this.state[inventoryItem.id+"sizeIndex"];
-                    let variation = inventoryItem.variations[i];
-                    return(
-                        <div className="item">
-                            <img src={inventoryItem.image} alt={inventoryItem.name} className="itemPicture"/> 
-                            <div className="itemDetails">
-                                <h3><b>{inventoryItem.name}</b></h3>
-                                <p>Price: {this.formatPrice(variation.price/variation.size)}/{inventoryItem.units}</p>
-                                <p>Sizes: </p>
-                                <div className="sizes">
-                                    {inventoryItem.variations.map((variation, index) => {
-                                        return(
-                                            <p className={"size " + (index==i ? "selected":"")} onClick={()=>{this.setSize(inventoryItem.id, index, variation)}}>{variation.size+inventoryItem.units}</p>
-                                        )
-                                    })} 
-                                </div>
-                                <div className="quantity">
-                                    <button className="btn btn-primary" onClick={() => {this.removeItem(inventoryItem.id)}}>-</button> 
-                                    <p>{quantity}</p> 
-                                    <button className="btn btn-primary" onClick={() => {this.addItem(inventoryItem.id, variation.quantity)}}>+</button> 
-                                </div>
-                                {quantity > 0 ? 
-                                    <button className="btn btn-primary addCart">
-                                        Add To Cart({this.getTotal(variation.price, quantity)})
-                                    </button> : null
-                                } 
-                            </div> 
-                        </div>
-                    )
-                })}
+                <div className="inventory">
+                    {this.state.items.map((inventoryItem: item) => {
+                        let quantity = this.state[inventoryItem.id+"cartQuantity"]; 
+                        let i = this.state[inventoryItem.id+"sizeIndex"];
+                        let variation = inventoryItem.variations[i];
+                        return(
+                            <div className="item">
+                                <img src={inventoryItem.image} alt={inventoryItem.name} className="itemPicture"/> 
+                                <div className="itemDetails">
+                                    <h3><b>{inventoryItem.name}</b></h3>
+                                    <p>Price: {this.formatPrice(variation.price/variation.size)}/{inventoryItem.units}</p>
+                                    <p>Sizes: </p>
+                                    <div className="sizes">
+                                        {inventoryItem.variations.map((variation, index) => {
+                                            return(
+                                                <p className={"size " + (index==i ? "selected":"")} onClick={()=>{this.setSize(inventoryItem.id, index, variation)}}>{variation.size+inventoryItem.units}</p>
+                                            )
+                                        })} 
+                                    </div>
+                                    <div className="quantity">
+                                        <button className="btn btn-primary" onClick={() => {this.removeItem(inventoryItem.id)}}>-</button> 
+                                        <p>{quantity}</p> 
+                                        <button className="btn btn-primary" onClick={() => {this.addItem(inventoryItem.id, variation.quantity)}}>+</button> 
+                                    </div>
+                                    {quantity > 0 ? 
+                                        <button className="btn btn-primary addCart">
+                                            Add To Cart({this.getTotal(variation.price, quantity)})
+                                        </button> : null
+                                    } 
+                                </div> 
+                            </div>
+                        )
+                    })}
+                </div>                 
             </div>
         )
     }

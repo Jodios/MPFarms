@@ -72,6 +72,33 @@
     transition: 500ms;
 }
 
+.cart{
+    float: right;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 10%;
+    border: solid black;
+}
+
+.cartIcon{
+    max-width: 100%;
+}
+
+.cartAmount{
+    text-align: left;
+}
+
+.cartAmount p{
+    text-align: center; 
+    background-color: rgb(248, 149, 0);
+    width: auto;
+    border-radius: 15%;
+}
+
+
+
+
+
 
 
 
